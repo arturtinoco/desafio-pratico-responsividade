@@ -1,0 +1,74 @@
+header {
+    justify-content: space-between;
+    background-color: var(--surface-color);
+    width: 100%;
+    height: 4.5rem;
+    padding: 1rem;
+
+    & > img {
+        width: 10.125rem;
+        height: 2rem;
+        cursor: pointer;
+    }
+
+    & ul {
+        height: 2.5rem;
+        cursor: pointer;
+
+        & li:nth-child(1) {
+            width: 1.5rem;
+            height: 1.5rem;
+
+            &:hover {
+                filter: invert(50%) sepia(61%) saturate(3176%) hue-rotate(333deg) brightness(99%) contrast(89%);
+            }
+        }
+
+        & li:nth-child(2), 
+        & li:nth-child(3) {
+            display: none;
+
+            &:hover {
+                color: var(--brand-color);
+            }
+        }
+
+        & li:nth-child(4),
+        & #profile-pic {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+    }
+    
+}
+
+@media ((width >= 44em) and (width < 80em)) {
+    header {
+        & ul {
+            & li:nth-child(2), 
+            & li:nth-child(3) {
+                display: list-item;
+            }
+        }
+    }
+}
+
+@media (width >= 80em) {
+    header {
+        height: 5rem;
+        padding: 2rem 1.25rem;
+
+        & ul {
+            & li:nth-child(1) {
+                padding: .25rem;
+            }
+
+            & li:nth-child(2), 
+            & li:nth-child(3) {
+                display: list-item;
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+        }
+    }
+}
