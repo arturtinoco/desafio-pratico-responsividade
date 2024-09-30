@@ -1,0 +1,60 @@
+#primary {
+    justify-content: space-between;
+    padding: 1rem;
+
+    & .menu-item {
+        & strong {
+            display: none;
+        }
+
+        & strong:hover {
+            color: var(--brand-color-light);
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    & > img {
+        width: 6.25rem;
+        height: 1.25rem;
+        cursor: pointer;
+    }
+}
+
+#secondary {
+    justify-content: space-between;
+    overflow-x: scroll;
+    gap: 2rem;
+    border-block: 1px solid var(--stroke-color);
+    padding: 0.875rem 1rem;
+
+    & a:hover {
+        color: var(--brand-color-light);
+    }
+}
+
+@media (width >= 37.5rem) { /* Tablet and Desktop*/
+    & #primary {
+        padding: 1.25rem 2rem;
+        
+        & .menu-item {
+
+            & strong {
+                display: block;
+            }
+        }
+
+        & > img {
+            width: 10rem;
+            height: 2rem;
+        }
+    }
+
+    & #secondary {
+        padding: 0.875rem 2rem;
+        overflow-x: hidden;
+    }
+
+}
